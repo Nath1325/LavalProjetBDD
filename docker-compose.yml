@@ -1,0 +1,9 @@
+version: '2'
+services:
+  projet-server:
+    container_name: projet-server
+    build:
+      dockerfile: Dockerfile
+    image: projet-server:latest
+    ports:
+      - 8080:8080
