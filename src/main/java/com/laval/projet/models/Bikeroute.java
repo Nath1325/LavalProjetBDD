@@ -1,22 +1,10 @@
 package com.laval.projet.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Document
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Bikeroute {
-
-    @JsonProperty("properties")
-    private Properties properties;
-    @JsonProperty("geometry")
-    private Geometry geometry;
-
+    public String type;
+    public Properties properties;
+    public Geometry geometry;
 }

@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class heartbeatController {
     @GetMapping("/heartbeat")
     public Heartbeat getHeartbeat() {
-        return new Heartbeat("Québec");
+        return new Heartbeat("Sherbrooke");
     }
 }

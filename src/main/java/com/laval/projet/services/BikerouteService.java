@@ -1,10 +1,8 @@
 package com.laval.projet.services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.laval.projet.models.Bikeroute;
 import com.laval.projet.models.PistesCyclablesRoot;
-import com.laval.projet.models.Restaurant;
 import com.laval.projet.repositories.BikerouteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,25 +19,27 @@ public class BikerouteService {
     private BikerouteRepository bikerouteRepository;
 
     @PostConstruct
-    private void loadRestaurants() {
+    private void loadBikeroutes() {
         ObjectMapper objectMapper = new ObjectMapper();
 
         PistesCyclablesRoot pistesCyclablesRoot = null;
 
         try {
             pistesCyclablesRoot = objectMapper.readValue(Paths
-                    .get("src/main/resources/restaurants.json")
+                    .get("src/main/resources/PistesCyclables.json")
                     .toFile(), PistesCyclablesRoot.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        bikerouteRepository.saveAll(pistesCyclablesRoot.getBikeroutes());
+        bikerouteRepository.saveAll(pistesCyclablesRoot.features);
     }
 
-    public List<Bikeroute> findAll(){
-        return bikerouteRepository.findAll();
+    public List<Bikeroute> findAll() {
+        return this.bikerouteRepository.findAll();
     }
 
+    public long getNbPistesCyclables(){
+        return this.bikerouteRepository.count();
+    }
 }
 

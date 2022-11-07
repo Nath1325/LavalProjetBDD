@@ -38,4 +38,8 @@ public class RestaurantService {
         return restaurantRepository.findAll();
     }
 
+    public long getNbRestaurants(){
+        return restaurantRepository.count();
+    }
+
 }
