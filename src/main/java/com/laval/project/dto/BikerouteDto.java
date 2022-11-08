@@ -1,12 +1,19 @@
-package com.laval.projet.models;
+/**
+ * 
+ */
+package com.laval.project.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.laval.projet.models.Geometry;
+import com.laval.projet.models.Properties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Bikeroute {
-    public String type;
-    public Properties properties;
-    public Geometry geometry;
+/**
+ * @author Faustin
+ *
+ */
+public class BikerouteDto {
+	private  String type;
+	private  Properties properties;
+	private  Geometry geometry;
 	public String getType() {
 		return type;
 	}
@@ -25,4 +32,8 @@ public class Bikeroute {
 	public void setGeometry(Geometry geometry) {
 		this.geometry = geometry;
 	}
+	
+	
+	
+	
 }

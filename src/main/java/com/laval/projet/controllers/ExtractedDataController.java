@@ -1,12 +1,12 @@
 package com.laval.projet.controllers;
 
-import com.laval.projet.models.ExtractedData;
-import com.laval.projet.models.Heartbeat;
-import com.laval.projet.services.BikerouteService;
-import com.laval.projet.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.laval.projet.models.ExtractedData;
+import com.laval.projet.services.BikerouteService;
+import com.laval.projet.services.RestaurantService;
 
 @RestController
 public class ExtractedDataController {

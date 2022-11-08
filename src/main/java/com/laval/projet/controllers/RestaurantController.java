@@ -1,28 +1,32 @@
 package com.laval.projet.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.laval.projet.models.Restaurant;
-import com.laval.projet.repositories.RestaurantRepository;
-import com.laval.projet.services.RestaurantService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
+import com.laval.project.dto.RestaurantDto;
+import com.laval.projet.services.Servicemap;
 
 @RestController
 public class RestaurantController {
 
     @Autowired
-    private RestaurantService restaurantService;
+    private Servicemap serviceMap;
 
-    @GetMapping("/restaurants")
-    public List<Restaurant> list() {
-        return restaurantService.findAll();
+   // @GetMapping("/restaurants")
+    @GetMapping(value = "/restaurant") 
+    public List<RestaurantDto> list() {
+    	System.out.println("DTODTO DTO");
+    	System.out.println("hellooo restuarant");
+    	 List <RestaurantDto> restaurantDtoList = serviceMap.getAllRestaurants();
+    	System.out.println("restaurantDtoList>>okok>>>"+restaurantDtoList);
+        return restaurantDtoList;
     }
+    @GetMapping(value = "/listrestaurants") 
+    public String  listRestaurants() {
 
-
+    	 return "helloooo";
+    }
 }
