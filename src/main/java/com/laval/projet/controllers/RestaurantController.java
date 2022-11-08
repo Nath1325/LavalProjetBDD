@@ -15,18 +15,12 @@ public class RestaurantController {
     @Autowired
     private Servicemap serviceMap;
 
-   // @GetMapping("/restaurants")
-    @GetMapping(value = "/restaurant") 
+    @GetMapping("/restaurants")    
     public List<RestaurantDto> list() {
-    	System.out.println("DTODTO DTO");
-    	System.out.println("hellooo restuarant");
+    
     	 List <RestaurantDto> restaurantDtoList = serviceMap.getAllRestaurants();
     	System.out.println("restaurantDtoList>>okok>>>"+restaurantDtoList);
         return restaurantDtoList;
     }
-    @GetMapping(value = "/listrestaurants") 
-    public String  listRestaurants() {
-
-    	 return "helloooo";
-    }
+   
 }

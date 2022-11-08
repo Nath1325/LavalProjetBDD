@@ -16,17 +16,25 @@ public class Mapper {
 	
 	 public RestaurantDto convertToRestaurantDto(Restaurant restaurent) {
 		 RestaurantDto restaurantDto = new RestaurantDto();
+		 restaurantDto.setId(restaurent.getId());
 		 restaurantDto.setNom(restaurent.getNom());
-		 restaurantDto.setRue(restaurent.getRue());
 		 restaurantDto.setSiteWeb(restaurent.getSiteWeb()); 
-	        
+		  		 
 	     return restaurantDto;
 	
 	 }
 	 public Restaurant convertToRestaurant(RestaurantDto restaurantDto) {
 		 Restaurant restaurant = new Restaurant();
 		 
-	        
+		 restaurant.setNom(restaurantDto.getNom());
+		 restaurant.setSiteWeb(restaurantDto.getSiteWeb());
+		 restaurant.setNumeroCivique(restaurantDto.getNumeroCivique());
+		 
+		 restaurant.setNumeroCivique(restaurantDto.getNumeroCivique());
+		 restaurant.setCodePostal(restaurantDto.getCodePostal());
+		 restaurant.setVille(restaurantDto.getVille());
+		 restaurant.setRue(restaurantDto.getRue());
+		  
 	     return restaurant;
 	
 	 }
@@ -49,11 +57,9 @@ public class Mapper {
 		 bikeRoute.setProperties(bikeRouteDto.getProperties());
 		 bikeRoute.setType(bikeRouteDto.getType());
 		 
-		return bikeRoute;
+		return bikeRoute;		 
 		 
-		 
-	 }
-	 
+	 } 
 	
 
 }

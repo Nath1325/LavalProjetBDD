@@ -17,4 +17,5 @@ public class BikerouteController {
     public List<Bikeroute> list() {
         return bikerouteService.findAll();
     }
+    
 }

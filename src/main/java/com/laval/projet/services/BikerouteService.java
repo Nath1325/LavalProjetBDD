@@ -31,6 +31,8 @@ public class BikerouteService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println(">>>>>>>>pistesCyclablesRoot"+pistesCyclablesRoot.toString());
+      
         
         bikerouteRepository.saveAll(pistesCyclablesRoot.features);
     }
