@@ -1,8 +1,11 @@
 package com.laval.projet.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.laval.projet.dto.BikerouteDTO;
+import com.laval.projet.mapper.BikerouteMapper;
+import com.laval.projet.mapper.RestaurantMapper;
 import com.laval.projet.models.Bikeroute;
-import com.laval.projet.models.PistesCyclablesRoot;
+import com.laval.projet.dto.PistesCyclablesRootDTO;
 import com.laval.projet.repositories.BikerouteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -20,21 +24,32 @@ public class BikerouteService {
 
     @PostConstruct
     private void loadBikeroutes() {
-        ObjectMapper objectMapper = new ObjectMapper();
 
-        PistesCyclablesRoot pistesCyclablesRoot = null;
+        //if DB is not empty, then do not fetch new data
+        if (this.getNbPistesCyclables() != 0 ) return;
+
+        //JSON to DTO Object
+        ObjectMapper objectMapper = new ObjectMapper();
+        PistesCyclablesRootDTO pistesCyclablesRootDTO = null;
 
         try {
-            pistesCyclablesRoot = objectMapper.readValue(Paths
+            pistesCyclablesRootDTO = objectMapper.readValue(Paths
                     .get("src/main/resources/PistesCyclables.json")
-                    .toFile(), PistesCyclablesRoot.class);
+                    .toFile(), PistesCyclablesRootDTO.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(">>>>>>>>pistesCyclablesRoot"+pistesCyclablesRoot.toString());
-      
-        
-        bikerouteRepository.saveAll(pistesCyclablesRoot.features);
+
+        //DTO to model
+
+        List<Bikeroute> bikeroutes = new ArrayList<>();
+        BikerouteMapper bikerouteMapper = new BikerouteMapper();
+
+        for (BikerouteDTO bikerouteDTO : pistesCyclablesRootDTO.getFeatures()){
+            bikeroutes.add(bikerouteMapper.convertToBikeRoute(bikerouteDTO));
+        }
+
+        bikerouteRepository.saveAll(bikeroutes);
     }
 
     public List<Bikeroute> findAll() {

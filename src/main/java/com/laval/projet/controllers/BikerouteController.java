@@ -1,5 +1,6 @@
 package com.laval.projet.controllers;
 
+import com.laval.projet.dto.BikerouteDTO;
 import com.laval.projet.models.Bikeroute;
 import com.laval.projet.services.BikerouteService;
 import org.springframework.beans.factory.annotation.Autowired;

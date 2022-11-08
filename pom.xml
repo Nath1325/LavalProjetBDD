@@ -13,14 +13,14 @@
 	<name>projet</name>
 	<description>spring biking project</description>
 	
-	<properties>
+	<propertiesDTO>
 		<java.version>11</java.version>
 		<junit.version>5.9.0</junit.version>
         <jersey.version>3.0.8</jersey.version>
         <jackson.version>2.13.4</jackson.version>
         <surefire.version>3.0.0-M7</surefire.version>
 		
-	</properties>
+	</propertiesDTO>
 	<dependencies>
 	
 	

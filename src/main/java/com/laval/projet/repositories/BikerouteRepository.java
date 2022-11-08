@@ -1,5 +1,6 @@
 package com.laval.projet.repositories;
 
+import com.laval.projet.dto.BikerouteDTO;
 import com.laval.projet.models.Bikeroute;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

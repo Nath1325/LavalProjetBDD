@@ -1,13 +1,18 @@
 package com.laval.projet.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class Properties{
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class Properties {
+
     public String name;
-    @JsonProperty("NOM")
-    public String nOM;
-    @JsonProperty("OBJECTID")
-    public int oBJECTID;
-    @JsonProperty("SHAPE__Length")
-    public double sHAPE__Length;
+    public double shapeLenght;
+
 }

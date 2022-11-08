@@ -6,7 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class ExtractedData {
     private long nbRestaurants;
     private long nbSegments;

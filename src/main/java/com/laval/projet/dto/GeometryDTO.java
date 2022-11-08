@@ -1,5 +1,6 @@
-package com.laval.projet.models;
+package com.laval.projet.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,8 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Geometry {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class GeometryDTO {
     public String type;
     public ArrayList<ArrayList<Object>> coordinates;
 }
