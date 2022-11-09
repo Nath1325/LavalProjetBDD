@@ -59,5 +59,14 @@ public class BikerouteService {
     public long getNbPistesCyclables(){
         return this.bikerouteRepository.count();
     }
+
+    public float getLongueurCyclable(){
+        float longueur = 0;
+        for (Bikeroute bikeroute: bikerouteRepository.findAll()){
+            longueur+=bikeroute.getProperties().getShapeLenght();
+        }
+        return longueur;
+    }
+
 }
 

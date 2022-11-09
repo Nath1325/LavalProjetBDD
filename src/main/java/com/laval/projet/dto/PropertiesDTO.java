@@ -12,7 +12,7 @@ public class PropertiesDTO {
     @JsonProperty("OBJECTID")
     public Double oBJECTID;
     @JsonProperty("SHAPE__Length")
-    public double sHAPE__Length;
+    public float sHAPE__Length;
 	public String getnOM() {
 		return nOM;
 	}
@@ -25,10 +25,10 @@ public class PropertiesDTO {
 	public void setoBJECTID(Double oBJECTID) {
 		this.oBJECTID = oBJECTID;
 	}
-	public double getsHAPE__Length() {
+	public float getsHAPE__Length() {
 		return sHAPE__Length;
 	}
-	public void setsHAPE__Length(double sHAPE__Length) {
+	public void setsHAPE__Length(float sHAPE__Length) {
 		this.sHAPE__Length = sHAPE__Length;
 	}
 	public Object getNOM() {

@@ -3,7 +3,7 @@
  */
 package com.laval.projet.mapper;
 
-import com.laval.projet.dto.RestaurantCategoryDto;
+import com.laval.projet.dto.RestaurantCategoryDTO;
 import com.laval.projet.models.RestaurantCategory;
 
 /**
@@ -12,7 +12,7 @@ import com.laval.projet.models.RestaurantCategory;
  */
 public class RestaurantCategoryMappper {
 	
-	public RestaurantCategory convertToBikeRoute(RestaurantCategoryDto restaurantCategoryDto) {
+	public RestaurantCategory convertToModel(RestaurantCategoryDTO restaurantCategoryDto) {
 		RestaurantCategory restaurantCateg=new RestaurantCategory();
 
 		restaurantCateg.setId(restaurantCategoryDto.getId());

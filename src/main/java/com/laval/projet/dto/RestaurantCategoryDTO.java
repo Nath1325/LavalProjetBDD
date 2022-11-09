@@ -3,19 +3,26 @@
  */
 package com.laval.projet.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author Faustin
  *
  */
-public class RestaurantCategoryDto {
-	private  String id;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class RestaurantCategoryDTO {
+	@JsonProperty("ID")
+	private  int id;
+	@JsonProperty("Nom")
 	private String nom;
+	@JsonProperty("ParentID")
 	private String parentId;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNom() {

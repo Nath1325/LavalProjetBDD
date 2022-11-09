@@ -24,8 +24,8 @@ public class RestaurantMapper {
 		 restaurant.setArrondissement(restaurantDTO.getArrondissement());
 		 restaurant.setCodePostal(restaurantDTO.getCodePostal());
 		 restaurant.setSiteWeb(restaurantDTO.getSiteWeb());
+		 restaurant.setCategories(restaurantDTO.getCategories());
 	     return restaurant;
-	
 	 }
 
 

@@ -13,6 +13,8 @@ public class Restaurant {
 
     private Double id;
     private String nom;
+
+	private String categories;
    
     private String siteWeb;
   
@@ -42,6 +44,14 @@ public class Restaurant {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public String getCategories() {
+		return categories;
+	}
+
+	public void setCategories(String categories) {
+		this.categories = categories;
 	}
 
 	public String getSiteWeb() {

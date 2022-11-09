@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+import java.util.HashMap;
+
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class Properties {
-
-    public String name;
-    public float shapeLenght;
-
+public class TransformedData {
+    private HashMap<String,Integer> restaurants;
+    private float longueurCyclable;
 }

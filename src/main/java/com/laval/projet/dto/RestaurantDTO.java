@@ -17,6 +17,9 @@ public class RestaurantDTO {
 	private Double id;
     @JsonProperty("Nom")
     private String nom;
+
+	@JsonProperty("Categories")
+	private String Categories;
     @JsonProperty("SiteWeb")
     private String siteWeb;
     @JsonProperty("NumeroCivique")
