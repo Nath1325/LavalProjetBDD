@@ -62,10 +62,4 @@ public class RestaurantCategoryService {
 	   public long getNbersResturantcategories(){
 	        return this.restaurantCategoryRepository.count();
 	    }
-	 
-	   
-
-	   
-	    
-
 }

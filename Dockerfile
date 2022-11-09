@@ -1,4 +1,4 @@
-FROM amazoncorretto:11-alpine-jdk
+FROM openjdk:11
 MAINTAINER nathan
 COPY target/projet-0.0.1-SNAPSHOT.jar projet-0.0.1-SNAPSHOT.jar
 EXPOSE 8080

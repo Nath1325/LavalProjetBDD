@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TransformedDataController {
 
     @Autowired
-    private RestaurantService restaurantService;
+    private BikerouteService bikerouteService;
 
     @Autowired
-    private BikerouteService bikerouteService;
+    private RestaurantService restaurantService;
 
     @GetMapping("/transformed_data")
     public TransformedData getTransformedData(){

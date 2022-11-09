@@ -8,6 +8,7 @@ services:
     ports:
       - 8080:8080
   mongodb_container:
+    container_name: mongodb_container
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -17,6 +18,7 @@ services:
     volumes:
       - mongodb_data_container:/data/db
   neo4j-container:
+    container_name: neo4j-container
     image: neo4j:latest
     restart: unless-stopped
     ports:
