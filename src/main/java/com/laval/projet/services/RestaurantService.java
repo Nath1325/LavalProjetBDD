@@ -58,5 +58,7 @@ public class RestaurantService {
     public long getNbRestaurants(){
         return restaurantRepository.count();
     }
+    
+    
 
 }

@@ -19,21 +19,21 @@ public class BikerouteMapper {
 
         return bikeRoute;
     }
-
     private Geometry GeometryDTOToModel(GeometryDTO geometryDTO){
-        Geometry geometry = new Geometry();
-        geometry.setCoordinates(geometryDTO.getCoordinates());
-        geometry.setType(geometryDTO.getType());
+        Geometry geometry = new Geometry();        
+        //geometry.setCoordinates(geometryDTO.getCoordinates());
+       // geometry.setType(geometryDTO.getType());
         return geometry;
     }
 
     private Properties PropertiesDTOToModel(PropertiesDTO propertiesDTO){
         Properties properties = new Properties();
-        properties.setName(propertiesDTO.getNOM());
-        properties.setShapeLenght(propertiesDTO.getSHAPE__Length());
+       // properties.setName(propertiesDTO.getNOM());
+       // properties.setShapeLenght(propertiesDTO.getSHAPE__Length());
 
         return properties;
     }
+    
 
 
 

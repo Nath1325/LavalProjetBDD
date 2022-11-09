@@ -16,4 +16,5 @@ import java.util.ArrayList;
 public class GeometryDTO {
     public String type;
     public ArrayList<ArrayList<Object>> coordinates;
+	
 }
