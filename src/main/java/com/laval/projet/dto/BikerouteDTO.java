@@ -1,28 +1,20 @@
 package com.laval.projet.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Getter
+@Setter
+@NoArgsConstructor
 public class BikerouteDTO {
+	@JsonProperty("type")
     public String type;
+	@JsonProperty("properties")
     public PropertiesDTO propertiesDTO;
+	@JsonProperty("geometry")
     public GeometryDTO geometryDTO;
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public PropertiesDTO getProperties() {
-		return propertiesDTO;
-	}
-	public void setProperties(PropertiesDTO propertiesDTO) {
-		this.propertiesDTO = propertiesDTO;
-	}
-	public GeometryDTO getGeometry() {
-		return geometryDTO;
-	}
-	public void setGeometry(GeometryDTO geometryDTO) {
-		this.geometryDTO = geometryDTO;
-	}
 }

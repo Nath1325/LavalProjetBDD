@@ -22,8 +22,8 @@ public class BikerouteService {
     @Autowired
     private BikerouteRepository bikerouteRepository;
 
-    @PostConstruct
-    private void loadBikeroutes() {
+
+    public void loadBikeroutes() {
 
         //if DB is not empty, then do not fetch new data
         if (this.getNbPistesCyclables() != 0 ) return;

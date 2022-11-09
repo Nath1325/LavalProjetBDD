@@ -10,7 +10,6 @@ public class heartbeatController {
 
     @GetMapping("/heartbeat")
     public Heartbeat getHeartbeat() {
-    	
         return new Heartbeat("Sherbrooke");
     }
     

@@ -19,6 +19,7 @@ public class ExtractedDataController {
 
     @GetMapping("/extracted_data")
     public ExtractedData getExtractedData() {
+        bikerouteService.loadBikeroutes();
         return new ExtractedData(restaurantService.getNbRestaurants(), bikerouteService.getNbPistesCyclables());
     }
 

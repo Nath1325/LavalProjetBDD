@@ -311,3 +311,31 @@
 2022-11-09 17:31:15.185+0000 INFO  Neo4j Server shutdown initiated by request
 2022-11-09 17:31:15.186+0000 INFO  Stopping...
 2022-11-09 17:31:18.081+0000 INFO  Stopped.
+2022-11-09 22:37:43.978+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+2022-11-09 22:37:43.981+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+2022-11-09 22:37:43.983+0000 INFO  Starting...
+2022-11-09 22:37:44.317+0000 INFO  This instance is ServerId{dddcbeb4} (dddcbeb4-5893-439d-931d-4780882d0809)
+2022-11-09 22:37:44.859+0000 INFO  ======== Neo4j 5.1.0 ========
+2022-11-09 22:37:47.075+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2022-11-09 22:37:47.566+0000 INFO  Remote interface available at http://localhost:7474/
+2022-11-09 22:37:47.570+0000 INFO  id: 5CBF333570F8B846ECCB9F302EF0F034073E8DF29A560AC865D3FDEADB64D53E
+2022-11-09 22:37:47.571+0000 INFO  name: system
+2022-11-09 22:37:47.572+0000 INFO  creationDate: 2022-11-03T19:14:27.486Z
+2022-11-09 22:37:47.573+0000 INFO  Started.
+2022-11-09 22:45:31.148+0000 INFO  Neo4j Server shutdown initiated by request
+2022-11-09 22:45:31.150+0000 INFO  Stopping...
+2022-11-09 22:45:34.102+0000 INFO  Stopped.
+2022-11-09 22:47:04.775+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+2022-11-09 22:47:04.778+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+2022-11-09 22:47:04.781+0000 INFO  Starting...
+2022-11-09 22:47:05.101+0000 INFO  This instance is ServerId{dddcbeb4} (dddcbeb4-5893-439d-931d-4780882d0809)
+2022-11-09 22:47:05.696+0000 INFO  ======== Neo4j 5.1.0 ========
+2022-11-09 22:47:07.911+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2022-11-09 22:47:08.451+0000 INFO  Remote interface available at http://localhost:7474/
+2022-11-09 22:47:08.455+0000 INFO  id: 5CBF333570F8B846ECCB9F302EF0F034073E8DF29A560AC865D3FDEADB64D53E
+2022-11-09 22:47:08.457+0000 INFO  name: system
+2022-11-09 22:47:08.458+0000 INFO  creationDate: 2022-11-03T19:14:27.486Z
+2022-11-09 22:47:08.459+0000 INFO  Started.
+2022-11-09 22:49:11.969+0000 INFO  Neo4j Server shutdown initiated by request
+2022-11-09 22:49:11.971+0000 INFO  Stopping...
+2022-11-09 22:49:15.203+0000 INFO  Stopped.

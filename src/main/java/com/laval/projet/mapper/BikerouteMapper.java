@@ -12,25 +12,24 @@ public class BikerouteMapper {
     public Bikeroute convertToBikeRoute(BikerouteDTO bikerouteDTO) {
         Bikeroute bikeRoute=new Bikeroute();
 
-        bikeRoute.setId(bikerouteDTO.getProperties().getOBJECTID());
-        bikeRoute.setGeometry(GeometryDTOToModel(bikerouteDTO.getGeometry()));
-        bikeRoute.setProperties(PropertiesDTOToModel(bikerouteDTO.getProperties()));
+        bikeRoute.setId(bikerouteDTO.getPropertiesDTO().getOBJECTID());
+        bikeRoute.setGeometry(GeometryDTOToModel(bikerouteDTO.getGeometryDTO()));
+        bikeRoute.setProperties(PropertiesDTOToModel(bikerouteDTO.getPropertiesDTO()));
         bikeRoute.setType(bikerouteDTO.getType());
 
         return bikeRoute;
     }
     private Geometry GeometryDTOToModel(GeometryDTO geometryDTO){
         Geometry geometry = new Geometry();        
-        //geometry.setCoordinates(geometryDTO.getCoordinates());
-       // geometry.setType(geometryDTO.getType());
+        geometry.setCoordinates(geometryDTO.getCoordinates());
+        geometry.setType(geometryDTO.getType());
         return geometry;
     }
 
     private Properties PropertiesDTOToModel(PropertiesDTO propertiesDTO){
         Properties properties = new Properties();
-       // properties.setName(propertiesDTO.getNOM());
-       // properties.setShapeLenght(propertiesDTO.getSHAPE__Length());
-
+        properties.setName(propertiesDTO.getNOM());
+        properties.setShapeLenght(propertiesDTO.getSHAPE__Length());
         return properties;
     }
     

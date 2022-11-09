@@ -18,11 +18,6 @@ import java.util.ArrayList;
 public class PistesCyclablesRootDTO {
     @JsonProperty("features")
     public ArrayList<BikerouteDTO> features;
-
-	public BikerouteDTO[] getFeatures() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
 
 

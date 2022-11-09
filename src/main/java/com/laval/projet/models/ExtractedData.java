@@ -9,13 +9,8 @@ import lombok.Setter;
 public class ExtractedData {
     private long nbRestaurants;
     private long nbSegments;
-	/**
-	 * @param nbRestaurants
-	 * @param nbSegments
-	 */
+
 	public ExtractedData(long nbRestaurants, long nbSegments) {
-		super();
-		
 		this.nbRestaurants = nbRestaurants;
 		this.nbSegments = nbSegments;
 	}

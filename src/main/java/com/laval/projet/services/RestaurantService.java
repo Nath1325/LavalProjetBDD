@@ -27,8 +27,8 @@ public class RestaurantService {
     @Autowired
     private RestaurantCategoryRepository restaurantCategoryRepository;
 
-    @PostConstruct
-    private void loadRestaurants() {
+
+    public void loadRestaurants() {
 
         //if DB is not empty, then do not fetch new data
         if (this.getNbRestaurants() != 0 ) return;
