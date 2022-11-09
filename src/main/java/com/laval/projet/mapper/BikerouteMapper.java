@@ -32,8 +32,5 @@ public class BikerouteMapper {
         properties.setShapeLenght(propertiesDTO.getSHAPE__Length());
         return properties;
     }
-    
-
-
 
 }
