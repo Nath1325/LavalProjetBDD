@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-12-17 20:08:35.987+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
 2022-12-17 20:08:35.995+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
 2022-12-17 20:08:35.998+0000 INFO  Starting...
@@ -51,3 +52,33 @@
 2022-12-17 22:33:30.871+0000 INFO  name: system
 2022-12-17 22:33:30.875+0000 INFO  creationDate: 2022-12-17T20:08:37.784Z
 2022-12-17 22:33:30.879+0000 INFO  Started.
+=======
+2022-12-17 22:47:26.006+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+2022-12-17 22:47:26.010+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+2022-12-17 22:47:26.013+0000 INFO  Starting...
+2022-12-17 22:47:26.365+0000 INFO  This instance is ServerId{4eab0686} (4eab0686-e0de-48b1-8df6-24ba03c194a8)
+2022-12-17 22:47:26.964+0000 INFO  ======== Neo4j 5.3.0 ========
+2022-12-17 22:47:29.322+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2022-12-17 22:47:29.767+0000 INFO  Remote interface available at http://localhost:7474/
+2022-12-17 22:47:29.771+0000 INFO  id: 81F1BD4B1A46FD6591A67B2C5B572C6A3C27833D0CC4F7E5B6AE9DF5395A4F79
+2022-12-17 22:47:29.772+0000 INFO  name: system
+2022-12-17 22:47:29.773+0000 INFO  creationDate: 2022-12-17T22:47:27.643Z
+2022-12-17 22:47:29.774+0000 INFO  Started.
+2022-12-17 22:53:24.060+0000 INFO  Neo4j Server shutdown initiated by request
+2022-12-17 22:53:24.062+0000 INFO  Stopping...
+2022-12-17 22:53:29.904+0000 INFO  Stopped.
+2022-12-17 23:01:16.839+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+2022-12-17 23:01:16.842+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+2022-12-17 23:01:16.844+0000 INFO  Starting...
+2022-12-17 23:01:17.198+0000 INFO  This instance is ServerId{4eab0686} (4eab0686-e0de-48b1-8df6-24ba03c194a8)
+2022-12-17 23:01:17.793+0000 INFO  ======== Neo4j 5.3.0 ========
+2022-12-17 23:01:19.835+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2022-12-17 23:01:20.342+0000 INFO  Remote interface available at http://localhost:7474/
+2022-12-17 23:01:20.346+0000 INFO  id: 81F1BD4B1A46FD6591A67B2C5B572C6A3C27833D0CC4F7E5B6AE9DF5395A4F79
+2022-12-17 23:01:20.347+0000 INFO  name: system
+2022-12-17 23:01:20.349+0000 INFO  creationDate: 2022-12-17T22:47:27.643Z
+2022-12-17 23:01:20.349+0000 INFO  Started.
+2022-12-17 23:07:47.219+0000 INFO  Neo4j Server shutdown initiated by request
+2022-12-17 23:07:47.220+0000 INFO  Stopping...
+2022-12-17 23:07:52.935+0000 INFO  Stopped.
+>>>>>>> 33e009d1994665ecb72c55a4579930e51f78fbfd
