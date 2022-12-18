@@ -30,6 +30,7 @@ public class TransformedDataController {
         transformedData.setRestaurants(restaurantService.getNbRestaurantPerCategories());
         transformedData.setLongueurCyclable(bikerouteService.getLongueurCyclable());
 
+   
         return transformedData;
     }
 
