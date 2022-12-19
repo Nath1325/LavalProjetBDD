@@ -3,8 +3,6 @@
  */
 package com.laval.projet.models;
 
-import org.springframework.data.annotation.Id;
-
 /**
  * @author Faustin
  *

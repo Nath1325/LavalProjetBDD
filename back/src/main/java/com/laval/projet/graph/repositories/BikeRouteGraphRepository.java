@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.laval.projet.graph.models.BikerouteNode;
 @Repository
-public interface BikeRouteGraphRepository extends Neo4jRepository<BikerouteNode, Double>{
+public interface BikeRouteGraphRepository extends Neo4jRepository<BikerouteNode,Double>{
 
 }

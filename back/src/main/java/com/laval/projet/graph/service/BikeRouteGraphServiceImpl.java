@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.laval.projet.graph.models.BikerouteNode;
 import com.laval.projet.graph.repositories.BikeRouteGraphRepository;
+
 @Service
 public class BikeRouteGraphServiceImpl implements BikerouteGraphService {
 	@Autowired

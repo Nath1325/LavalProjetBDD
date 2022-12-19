@@ -1,20 +1,19 @@
 package com.laval.projet.services;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.laval.projet.dto.BikerouteDTO;
-import com.laval.projet.mapper.BikerouteMapper;
-import com.laval.projet.mapper.RestaurantMapper;
-import com.laval.projet.models.Bikeroute;
-import com.laval.projet.dto.PistesCyclablesRootDTO;
-import com.laval.projet.repositories.BikerouteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.laval.projet.dto.BikerouteDTO;
+import com.laval.projet.dto.PistesCyclablesRootDTO;
+import com.laval.projet.mapper.BikerouteMapper;
+import com.laval.projet.models.Bikeroute;
+import com.laval.projet.repositories.BikerouteRepository;
 
 @Service
 public class BikerouteService {
