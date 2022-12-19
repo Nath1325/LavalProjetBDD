@@ -125,5 +125,4 @@ public class RestaurantNode {
 		this.id = id;
 	}
 
-
 }

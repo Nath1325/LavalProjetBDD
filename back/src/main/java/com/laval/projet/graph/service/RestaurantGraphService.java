@@ -1,33 +1,16 @@
-/**
- * 
- */
 package com.laval.projet.graph.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.laval.projet.graph.repositories.RestaurantGraphRepository;
-import com.laval.projet.models.Restaurant;
-
-/**
- * @author Faustin
- *
- */
+import com.laval.projet.graph.models.RestaurantNode;
 @Service
-public class RestaurantGraphService {
+public interface RestaurantGraphService {
+	
+	
+	public RestaurantNode saveRestaurantNode(RestaurantNode restaurantNode);
 
-	@Autowired
-	private RestaurantGraphRepository restaurantGraphRepository;
+	public List<RestaurantNode> fetchRestaurantNodeList() ;
 
-	public Restaurant saveRestaurantNode(Restaurant restaurant) {
-		restaurantGraphRepository.save(restaurant);
-		return restaurant;
-	}
-
-	public List<Restaurant> fetchRestaurantNodeList() {
-		List<Restaurant> restaurants = restaurantGraphRepository.findAll();
-		return restaurants;
-	}
 }
