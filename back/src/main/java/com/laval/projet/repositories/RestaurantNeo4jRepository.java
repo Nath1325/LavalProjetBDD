@@ -1,9 +1,9 @@
 package com.laval.projet.repositories;
 
 import com.laval.projet.models.Restaurant;
-import org.springframework.stereotype.Repository;
+import com.laval.projet.models.nodes.RestaurantNode;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
 
-@Repository
-public interface RestaurantNeo4jRepository {
+public interface RestaurantNeo4jRepository extends Neo4jRepository<RestaurantNode,Long> {
 
 }

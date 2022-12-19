@@ -6,6 +6,7 @@ com\laval\projet\ProjetApplication.class
 com\laval\projet\repositories\RestaurantRepository.class
 com\laval\projet\controllers\TransformedDataController.class
 com\laval\projet\mapper\RestaurantCategoryMappper.class
+com\laval\projet\models\nodes\RestaurantNode.class
 com\laval\projet\dto\PropertiesDTO.class
 com\laval\projet\mapper\RestaurantMapper.class
 com\laval\projet\models\Bikeroute.class

@@ -5,12 +5,17 @@ import com.laval.projet.dto.RestaurantDTO;
 import com.laval.projet.mapper.RestaurantMapper;
 import com.laval.projet.models.Restaurant;
 import com.laval.projet.models.RestaurantCategory;
+import com.laval.projet.models.nodes.RestaurantNode;
 import com.laval.projet.repositories.RestaurantCategoryRepository;
+import com.laval.projet.repositories.RestaurantNeo4jRepository;
 import com.laval.projet.repositories.RestaurantRepository;
+import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+import org.neo4j.driver.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -25,13 +30,16 @@ public class RestaurantService {
     private RestaurantRepository restaurantRepository;
 
     @Autowired
-    private RestaurantCategoryRepository restaurantCategoryRepository;
+    private RestaurantNeo4jRepository restaurantNeo4jRepository;
 
+    @Autowired
+    private RestaurantCategoryRepository restaurantCategoryRepository;
 
     public void loadRestaurants() {
 
-        //if DB is not empty, then do not fetch new data
-        if (this.getNbRestaurants() != 0 ) return;
+        // If false, then db is already filled with data.
+        boolean neo4j = this.countInNeo4j() == 0;
+        boolean mongo = this.getNbRestaurants() == 0;
 
         //JSON to DTO Object
         ObjectMapper objectMapper = new ObjectMapper();
@@ -48,17 +56,27 @@ public class RestaurantService {
         //DTO to model
 
         List<Restaurant> restaurants = new ArrayList<>();
+        List<RestaurantNode> restaurantNodes = new ArrayList<>();
         RestaurantMapper restaurantMapper = new RestaurantMapper();
 
         for (RestaurantDTO restaurantDTO : restaurantDTOS){
-            restaurants.add(restaurantMapper.convertToRestaurant(restaurantDTO));
+            if(mongo) restaurants.add(restaurantMapper.convertToRestaurant(restaurantDTO));
+            if (neo4j) restaurantNodes.add(restaurantMapper.convertToRestaurantNode(restaurantDTO));
         }
 
         restaurantRepository.saveAll(restaurants);
+        restaurantNeo4jRepository.saveAll(restaurantNodes);
+
+        System.out.println(restaurantNeo4jRepository.count());
+        System.out.println(restaurantRepository.count());
     }
 
     public List<Restaurant> findAll(){
         return restaurantRepository.findAll();
+    }
+
+    public long countInNeo4j(){
+        return restaurantNeo4jRepository.count();
     }
 
     public HashMap<String, Integer> getNbRestaurantPerCategories(){

@@ -18,8 +18,6 @@ import com.laval.projet.dto.RestaurantCategoryDTO;
 import com.laval.projet.repositories.RestaurantCategoryRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-
 
 /**
  * @author Faustin

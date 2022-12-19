@@ -7,6 +7,7 @@ import com.laval.projet.models.Bikeroute;
 import com.laval.projet.models.Restaurant;
 import com.laval.projet.dto.RestaurantDTO;
 import com.laval.projet.dto.BikerouteDTO;
+import com.laval.projet.models.nodes.RestaurantNode;
 
 /**
  * @author Faustin
@@ -26,6 +27,20 @@ public class RestaurantMapper {
 		 restaurant.setSiteWeb(restaurantDTO.getSiteWeb());
 		 restaurant.setCategories(restaurantDTO.getCategories());
 	     return restaurant;
+	 }
+
+	 public RestaurantNode convertToRestaurantNode(RestaurantDTO restaurantDTO){
+		 RestaurantNode restaurant = new RestaurantNode();
+		 restaurant.setId(restaurantDTO.getId().longValue());
+		 restaurant.setNom(restaurantDTO.getNom());
+		 restaurant.setLatitude(restaurantDTO.getLatitude());
+		 restaurant.setLongitude(restaurantDTO.getLongitude());
+		 restaurant.setRue(restaurantDTO.getRue());
+		 restaurant.setArrondissement(restaurantDTO.getArrondissement());
+		 restaurant.setCodePostal(restaurantDTO.getCodePostal());
+		 restaurant.setSiteWeb(restaurantDTO.getSiteWeb());
+		 restaurant.setCategories(restaurantDTO.getCategories());
+		 return restaurant;
 	 }
 
 
